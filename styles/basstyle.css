@@ -1,0 +1,77 @@
+/*THIS CODE HAS BEEN WRITTEN BY ME: ACZW860*/
+/*CSS GRID SETTINGS*/
+/*=============================================================================*/
+/*=============================================================================*/
+
+/*Page HEAD grid style*/
+.headwrapper {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: rgb(22, 22, 22);
+    background: linear-gradient(0deg, rgba(22, 22, 22, 0.70) 89%, rgba(232, 215, 20, 0.70) 100%);
+    margin-bottom: 1em;
+}
+
+/*Page BODY grid style*/
+.bodywrapper {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    row-gap: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1em;
+}
+/*This sets the grid sytle of the main body*/
+.bodywrapperlogin {
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 60px;
+    row-gap: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1em;
+}
+
+/*Page FOOTER grid style*/
+.footerwrapper>nav {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: rgba(232, 215, 20, 1);
+
+
+}
+
+.footerwrapper>nav>section {
+
+    background: rgb(22, 22, 22);
+    background: linear-gradient(0deg, rgba(22, 22, 22, 0.70) 89%, rgba(232, 215, 20, 0.70) 100%);
+
+}
+
+
+/*=============================================================================*/
+/*=============================================================================*/
+/*This changes the grid so that it has better visibility*/
+@media (max-width: 1290px) {
+
+    .headwrapper {
+
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        background: rgb(22, 22, 22);
+        background: linear-gradient(0deg, rgba(22, 22, 22, 0.70) 89%, rgba(232, 215, 20, 0.70) 100%);
+        margin-bottom: 1em;
+    }
+
+    .bodywrapper {
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+}

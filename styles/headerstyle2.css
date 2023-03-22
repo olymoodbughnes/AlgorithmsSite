@@ -1,0 +1,183 @@
+/*THIS CODE HAS BEEN WRITTEN BY ME: ACZW860*/
+/*CSS UPPER BODY "head" of website*/
+/*-----------------------------------------------------------------------------*/
+.headwrapper>section {
+    position: relative;
+    padding: 15%;
+}
+
+/*LOGO*/
+.headwrapper>section.navigationHeadLeft>a {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+/*TITLE TEXT*/
+.headwrapper>section.navigationHeadRight>header {
+    color: rgba(232, 215, 20, 1);
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+}
+
+/*TITLE NAVIGATION (links & search bar)*/
+.headwrapper>section.navigationHeadRight>nav {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+
+/*links*/
+.headwrapper>section.navigationHeadRight>nav>a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgba(232, 215, 20, 1);
+}
+
+/*links when hovered*/
+.headwrapper>section.navigationHeadRight>nav>a:hover {
+    border-style: solid;
+    border-width: 0.1vw;
+    border-radius: 5px;
+    background-color: grey;
+    transition: 2s;
+}
+
+/*search bar*/
+.headwrapper>section.navigationHeadRight>nav>input {
+    background-color: rgba(22, 22, 22, 0.5);
+    border-color: rgba(232, 215, 20, 0.7);
+    border-style: solid;
+    border-width: 0.1vw;
+    border-radius: 5px;
+    color: rgba(232, 215, 20, 1);
+
+
+}
+
+.imgex2 {
+
+    width: 70%;
+    height: 70%;
+}
+/*This sets the style for the pop up navigation bar*/
+aside>div>a {
+    position: relative;
+    left: 35%;
+    bottom: 10%;
+    background: rgb(22, 22, 22);
+    background: linear-gradient(0deg, rgba(22, 22, 22, 0.80) 89%, rgba(232, 215, 20, 0.90) 100%);
+    border-radius: 4px;
+    padding-top: 3%;
+    color: rgba(232, 215, 20, 1);
+    font-size: 60%;
+
+    margin-bottom: 1em;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    transition: background linear-gradient();
+    width: 10%;
+
+
+}
+
+/*This sets the style for the pop up nav button*/
+aside>button {
+    position: relative;
+    left: 1%;
+    bottom: 10%;
+    padding-top: 1%;
+    background: rgb(22, 22, 22);
+    background: linear-gradient(0deg, rgba(22, 22, 22, 0.80) 89%, rgba(232, 215, 20, 0.90) 100%);
+    border-radius: 4px;
+    padding-top: 3%;
+    color: rgba(232, 215, 20, 1);
+    padding-bottom: 1%;
+    margin-bottom: 1em;
+    padding-left: 5%;
+    transition: background linear-gradient();
+    width: 95%;
+
+}
+
+
+/*CSS STYLE [MEDIA QUERIES]*/
+/*=============================================================================*/
+/*=============================================================================*/
+
+@media (max-width: 1330px) {
+
+
+    .headwrapper>section.navigationHeadRight {
+        display: none;
+    }
+
+    aside>div {
+
+        display: flex;
+
+        flex-direction: column;
+
+    }
+
+
+
+
+    .imgex2 {
+        position: relative;
+        top: 50%;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+
+    }
+
+
+}
+
+@media(min-width: 1330px) {
+    aside {
+
+        display: none;
+    }
+
+
+}
+
+@media (max-width: 909px) {
+
+
+
+    .imgex2 {
+        position: relative;
+        top: 50%;
+        left: 100%;
+        width: 75%;
+        height: 100%;
+    }
+
+
+}
+
+@media (max-width: 684px) {
+
+
+
+    .imgex2 {
+        position: relative;
+        width: 35%;
+        height: 90%;
+        left: 75%;
+
+    }
+
+
+}
+
+/*=============================================================================*/
+/*=============================================================================*/

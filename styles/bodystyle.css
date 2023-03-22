@@ -1,0 +1,232 @@
+/*THIS CODE HAS BEEN WRITTEN BY ME: ACZW860*/
+/*CSS STYLE [BODY]*/
+/*=============================================================================*/
+/*=============================================================================*/
+
+
+/*This sets the style for the inputs in the forms*/
+.bodywrapperlogin>section>form>input {
+    background-color: rgba(22, 22, 22, 0.5);
+    border-color: rgba(232, 215, 20, 0.7);
+    border-style: solid;
+    border-width: 0.1vw;
+    border-radius: 5px;
+    color: rgba(232, 215, 20, 1);
+}
+
+/*This sets the style for the select input*/
+
+.bodywrapperlogin>section>form>select {
+
+    background-color: rgba(22, 22, 22, 0.5);
+    border-color: rgba(232, 215, 20, 0.7);
+    border-style: solid;
+    border-width: 0.1vw;
+    border-radius: 5px;
+    color: rgba(232, 215, 20, 1);
+}
+/*This sets a placeholder colour when it is used e.g searchbar, fields...*/
+::placeholder {
+
+    color: rgba(232, 215, 20, 1);
+    font-weight: bold;
+
+
+}
+
+/*-----------------------------------------------------------------------------*/
+
+
+
+
+/*CSS MAIN BODY "body" of website*/
+/*-----------------------------------------------------------------------------*/
+body {
+    background-color: grey;
+    background-image: url("https://i.imgur.com/TyiPvQO.jpg");
+    background-size: cover;
+    background-size: 100% 100%;
+
+
+
+}
+
+/*This sets the style of the explanation text at the beggining of the website*/
+.expltext {
+
+    color: rgba(232, 215, 20, 1);
+    background: rgb(22, 22, 22);
+    background: linear-gradient(0deg, rgba(22, 22, 22, 0.80) 89%, rgba(232, 215, 20, 0.90) 100%);
+    padding: 2em;
+    margin-bottom: 1em;
+
+}
+/*This sets the style for the section tags in the main body of each page*/
+.bodywrapper>a>section,
+.bodywrapperlogin>section,
+.bodywrapperflex>section {
+    bottom: 10%;
+    padding-top: 1%;
+    background: rgb(22, 22, 22);
+    background: linear-gradient(0deg, rgba(22, 22, 22, 0.80) 89%, rgba(232, 215, 20, 0.90) 100%);
+    border-radius: 4px;
+    padding-top: 3%;
+    color: rgba(232, 215, 20, 1);
+    padding-bottom: 1%;
+    margin-bottom: 1em;
+    padding-left: 5%;
+    transition: background linear-gradient();
+
+}
+
+.bodywrapper>a {
+
+    text-decoration-line: none;
+}
+
+/*This sets the colour of reference links to yellow*/
+.reflinks {
+
+    color: rgba(232, 215, 20, 1);
+}
+/*This sets the style for the javascript quiz game*/
+.styleonce {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    bottom: 10%;
+    padding-top: 1%;
+    background: rgb(22, 22, 22);
+    background: linear-gradient(0deg, rgba(22, 22, 22, 0.80) 89%, rgba(232, 215, 20, 0.90) 100%);
+    border-radius: 4px;
+    padding-top: 3%;
+    color: rgba(232, 215, 20, 1);
+    padding-bottom: 1%;
+    margin-bottom: 1em;
+    padding-left: 5%;
+    transition: background linear-gradient();
+    width: 95%;
+
+}
+
+/*
+ Title: gradient animator
+*    Author: Ian Forrest
+*    Date: 2020
+*    Code version: 1
+*    Availability: https://www.gradient-animator.com/
+*/
+
+.bodywrapper>a>section:hover {
+
+    background: linear-gradient(0deg, #161616, #e8d714);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 14s ease infinite;
+    -moz-animation: AnimationName 14s ease infinite;
+    animation: AnimationName 14s ease infinite;
+
+
+
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 92%
+    }
+
+    50% {
+        background-position: 100% 9%
+    }
+
+    100% {
+        background-position: 0% 92%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 92%
+    }
+
+    50% {
+        background-position: 100% 9%
+    }
+
+    100% {
+        background-position: 0% 92%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 92%
+    }
+
+    50% {
+        background-position: 100% 9%
+    }
+
+    100% {
+        background-position: 0% 92%
+    }
+}
+
+/*END OF OUTSOURCED CSS CODE*/
+
+/*THIS CODE HAS BEEN WRITTEN BY ME: ACZW860*/
+/*This sets the style for the image that are shown as fading*/
+.imgex {
+    opacity: 20%;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+
+    width: 90%;
+    height: 90%;
+}
+
+.imgex3 {
+    opacity: 60%;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+
+    width: 40%;
+    height: 30%;
+}
+
+
+.bodywrapper>section>h2 {
+    position: absolute;
+    padding: 1em;
+}
+
+
+
+/*-----------------------------------------------------------------------------*/
+
+/*FORM FEEDBACK*/
+.signuperror {
+
+    color: red;
+}
+
+.signup {
+
+    color: cyan;
+}
+
+/*=============================================================================*/
+/*=============================================================================*/
+
+
+@media (max-width: 1330px) {
+
+
+    .bodywrapper {
+        font-size: small;
+    }
+
+
+
+}

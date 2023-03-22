@@ -1,0 +1,213 @@
+<!--THIS CODE HAS BEEN WRITTEN BY ME: ACZW860-->
+
+<!--PHP[Check that a session has been started, if not send back to login page]-->
+<?php 
+session_start();
+if(!isset($_SESSION['currentusername'])){
+    header('location:index.php');
+                                        }
+?>
+
+<!DOCTYPE html>
+<!--LANGUAGE CHOSEN IS ENGLISH "EN" AS THE CONTENT OF THE WEBSITE IS EXCLUSIVELY WRITTEN IN ENGLISH.-->
+<html lang="en">
+
+<head>
+    <!--Encoding has been set to UTF-8 as it is the most versatile in this situation.-->
+    <meta charset="UTF-8">
+    <!--User viewport set for consistent viewing of the websites.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/basstyle.css">
+    <link rel="stylesheet" type="text/css" href="styles/bodystyle.css">
+    <link rel="stylesheet" type="text/css" href="styles/footerstyle.css">
+    <link rel="stylesheet" type="text/css" href="styles/headerstyle2.css">
+    <link rel="stylesheet" type="text/css" href="styles/resizestyle.css">
+    <script src="scripts/bascript.js"></script>
+
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <!--EXCLUSIVELY NAVIGATION LINK ARTICLE, this article will solely contain links to web pages.-->
+    <article class="headwrapper">
+
+        <section class="navigationHeadLeft">
+            <!--WEBSITE LOGO, this goes on the upper left corner of the website.
+                SERVES AS A LINK TO HOMEPAGE, this will be the main way in which to go back to the main page.-->
+            <a href="main.html">
+                <img class="imgex2" src="images/Logo1.png" height="180px" width="300px">
+            </a>
+            <!--NAVIGATION LINKS, these links will redirect the user to a number of separate web pages.-->
+        </section>
+
+
+        <section class="navigationHeadRight">
+            <!--PAGE HEAD TITLE-->
+            <header>
+                <h2>Sorting Algorithms</h2>
+                <!--PAHE HEAD SUBTITLE-->
+                <h4>The importance of order.</h4>
+                <?php
+                if(isset($_SESSION['currentusername'])){
+    echo '  <p>
+                Signed in.   
+            </p>';}
+                ?>
+            </header>
+            <nav>
+                <a href="index.php">Log in/Log out</a>
+                <span>|</span>
+                <a href="https://www.youtube.com/watch?v=vmT3XUBoxiQ">Graphical Examples</a>
+                <span>|</span>
+                <a href="sors.html">References</a>
+                <input type="search" placeholder="Search Here">
+            </nav>
+        </section>
+
+    </article>
+    <aside>
+
+        <button onclick="myFunction()">hide/show</button>
+        <div id="myDIV">
+
+            <a id="dis" href="index.php">Log in/Log out</a>
+            <span>|</span>
+            <a id="dis" href="https://www.youtube.com/watch?v=vmT3XUBoxiQ">Graphical Examples</a>
+            <span>|</span>
+            <a id="dis" href="sors.html">References</a>
+        </div>
+
+
+
+
+
+    </aside>
+    <!--START OF MAIN BODY CONTENT-->
+    <div class="bodyUniverse">
+
+        <article class="bodywrapperflex">
+            <!--ALGORITHMS EXPLANATION PART 1-->
+
+            <section>
+                <h2>Merge sort</h2>
+                <img class="imgex3" src="images/mergeSort.png" alt = "sorting algorithm graphic representation">
+                <p>This sorting algorithm is affected by the size of the input
+                    as most sorting algorithms tend to do. But, unlike other
+                    sorting algorithms merge sort has a complexity
+                    of O logarithm of N in big O notation, this means that
+                    if the input is sized 10 the time-to-sort will be half of
+                    what the algorithm would take to sort an input that is ten times the size.
+                    This logic can be applied to bigger numbers and the same logic will apply.
+
+                    Merge sorts are based on the assumption that a given list is already
+                    sorted to some degree, for example,
+                    when sorting a list of integers, this algorithm will look at data as pairs,
+                    starting at a predetermined position such as the last and penultimate
+                    positions or the first and second positions, the reason why it's not comparing,
+                    for example the first and last positions is because this algorithm focuses on
+                    comparing positions adjacent to each other, and,
+                    data at the first position and the last position aren't adjacent to each other,
+                    hence the example.
+                </p>
+            </section>
+
+            <!--ALGORITHMS EXPLANATION PART 2-->
+
+            <section>
+                <h2>Heap sort</h2>
+                <img class="imgex3" src="images/heapSort.jpg" height="300" width="400"
+                    alt="sorting algorithm graphic representation">
+                <p>
+                    Heapsort is another example of an efficient sorting algorithm.
+                    It works by identifying the extremes of a list and placing these
+                    extremes at their appropriate locations, for example,
+                    the smallest integer on a list will be placed at the begining of a list,
+                    whereas the largest will be placed at the end.
+                    Heapsort isn't the only algorithm that approaches sorting in this manner, however,
+                    it does do something that algorithms with similar approaches like selection sort,
+                    don't do, for example, it uses a data structure that is designated as a data heap,
+                    which in itself is a type of binary tree,
+                    the way it works is that once the data has been sorted into a "heap"
+                    it can then be assumed that the root node of the heap has to be the
+                    largest extreme of the data input.
+                    After the largest extreme has been identified and sorted,
+                    the sorting algorithms begins again to sort the data into a
+                    "heap" and it repeats the process again, finding the extreme each time,
+                    just like the previous example, the heapsort has a complexity of O logarithm of N
+                    which is a very efficient complexity and makes it prone to being
+                    more relied on than other algorithms.
+
+                </p>
+
+
+        </article>
+
+    </div>
+
+    <!--END OF MAIN BODY CONTENT-->
+
+</body>
+<!--START OF FOOTER CONTENT-->
+<footer class="footerwrapper">
+    <!--NAVIGATIONS LINKS-->
+    <nav>
+        <section>
+            <h3>Useful Links</h3>
+            <ul>
+                <li>
+                    <a href="https://www.khanacademy.org/computing/computer-science/algorithms">
+                        Khan academy on algorithms
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.softpanorama.org/Algorithms/sorting.shtml">
+                        softpanorama
+                    </a>
+                </li>
+
+
+            </ul>
+        </section>
+        <section>
+            <h3>Info Sources</h3>
+            <ul>
+                <li>
+                    <a href="https://brilliant.org/wiki/sorting-algorithms/">
+                        Brilliant on sorting algoritms
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.geeksforgeeks.org/sorting-algorithms/">
+                        geeksforgeeks
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3>Content References</h3>
+            <ul>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/Sorting_algorithm">
+                        wikipedia
+                    </a>
+                </li>
+                <li>
+                    <a href="https://xlinux.nist.gov/dads/">
+                        xlinux
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=kPRA0W1kECg">
+                        youtube
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+    </nav>
+</footer>
+<!--END OF FOOTER-->
+
+</html>

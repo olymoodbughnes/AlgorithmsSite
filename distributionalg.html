@@ -1,0 +1,202 @@
+<!--THIS CODE HAS BEEN WRITTEN BY ME: ACZW860-->
+
+<!--PHP[Check that a session has been started, if not send back to login page]-->
+<?php 
+session_start();
+if(!isset($_SESSION['currentusername'])){
+    header('location:index.php');
+                                        }
+?>
+
+<!DOCTYPE html>
+<!--LANGUAGE CHOSEN IS ENGLISH "EN" AS THE CONTENT OF THE WEBSITE IS EXCLUSIVELY WRITTEN IN ENGLISH.-->
+<html lang="en">
+
+<head>
+    <!--Encoding has been set to UTF-8 as it is the most versatile in this situation.-->
+    <meta charset="UTF-8">
+    <!--User viewport set for consistent viewing of the websites.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/basstyle.css">
+    <link rel="stylesheet" type="text/css" href="styles/bodystyle.css">
+    <link rel="stylesheet" type="text/css" href="styles/footerstyle.css">
+    <link rel="stylesheet" type="text/css" href="styles/headerstyle2.css">
+    <link rel="stylesheet" type="text/css" href="styles/resizestyle.css">
+    <script src="scripts/bascript.js"></script>
+
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <!--EXCLUSIVELY NAVIGATION LINK ARTICLE, this article will solely contain links to web pages.-->
+    <article class="headwrapper">
+
+        <section class="navigationHeadLeft">
+            <!--WEBSITE LOGO, this goes on the upper left corner of the website.
+                SERVES AS A LINK TO HOMEPAGE, this will be the main way in which to go back to the main page.-->
+            <a href="main.html">
+                <img class="imgex2" src="images/Logo1.png" height="180px" width="300px">
+            </a>
+            <!--NAVIGATION LINKS, these links will redirect the user to a number of separate web pages.-->
+        </section>
+
+
+        <section class="navigationHeadRight">
+            <!--PAGE HEAD TITLE-->
+            <header>
+                <h2>Sorting Algorithms</h2>
+                <!--PAHE HEAD SUBTITLE-->
+                <h4>The importance of order.</h4>
+                <?php
+                if(isset($_SESSION['currentusername'])){
+    echo '  <p>
+                Signed in.   
+            </p>';}
+                ?>
+            </header>
+            <nav>
+                <a href="index.php">Log in/Log out</a>
+                <span>|</span>
+                <a href="https://www.youtube.com/watch?v=vmT3XUBoxiQ">Graphical Examples</a>
+                <span>|</span>
+                <a href="sors.html">References</a>
+                <input type="search" placeholder="Search Here">
+            </nav>
+        </section>
+
+    </article>
+    <aside>
+
+        <button onclick="myFunction()">hide/show</button>
+        <div id="myDIV">
+
+            <a id="dis" href="index.php">Log in/Log out</a>
+            <span>|</span>
+            <a id="dis" href="https://www.youtube.com/watch?v=vmT3XUBoxiQ">Graphical Examples</a>
+            <span>|</span>
+            <a id="dis" href="sors.html">References</a>
+        </div>
+
+
+
+
+
+    </aside>
+    <!--START OF MAIN BODY CONTENT-->
+    <div class="bodyUniverse">
+
+        <article class="bodywrapperflex">
+            <!--ALGORITHMS EXPLANATION PART 1-->
+
+            <section>
+                <h2>Counting Sort</h2>
+                <img class="imgex3" src="images/countingSort.png" alt = "sorting algorithm graphic representation">
+                <p>
+                    Counting sorts are normally used when the input dataset has additional data
+                    such as knowing that each elements must go on a separate list.
+                    In other words, it belongs to a different set.
+                    The cost of this algorithm is O dataset hide/show n in big O notation.
+                    The way thos algorithm works is by initialising another list, this list will
+                    be where the chosen elements will be placed, for example, all odd numbers in a list.
+                    The algorithm will begin looking for instances of the correct type of element,
+                    then the elements are ordered to better fit into an ordered list, after which point
+                    the algorithm can begin placing them in the new separete list.
+
+
+                    This algoritm is often ignored as it isn't as versatile as other algorithms, this algorithm
+                    needs to operate on a smaller dataset, as its cost will make sorting through larger lists
+                    a lengthy process
+                </p>
+            </section>
+
+            <!--ALGORITHMS EXPLANATION PART 2-->
+
+            <section>
+                <h2>Bucket Sort</h2>
+                <img class="imgex3" src="images/bucketSort.png" height="300" width="400"
+                    alt="sorting algorithm graphic representation">
+                <p>
+                    Bucket sorts approach to organising datasets is based on segmenting said dataset
+                    into smaller datasets and tackling each smaller dataset one at a time,
+                    these smaller datasets are usually referred to as buckets, as they behave in
+                    a way that resembles a bucket full of something. In summary the smaller datasets can
+                    have data inserted in them easily, but this data is kept in that dataset separate from
+                    any other similar datasets that might be near it. They all behave as different datasets.
+                    For this reason, bucket sort can be used in conjucntion with other algorithms that might be better
+                    at sorting
+                    smaller datasets.
+
+                </p>
+
+
+        </article>
+
+    </div>
+
+    <!--END OF MAIN BODY CONTENT-->
+
+</body>
+<!--START OF FOOTER CONTENT-->
+<footer class="footerwrapper">
+    <!--NAVIGATIONS LINKS-->
+    <nav>
+        <section>
+            <h3>Useful Links</h3>
+            <ul>
+                <li>
+                    <a href="https://www.khanacademy.org/computing/computer-science/algorithms">
+                        Khan academy on algorithms
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.softpanorama.org/Algorithms/sorting.shtml">
+                        softpanorama
+                    </a>
+                </li>
+
+
+            </ul>
+        </section>
+        <section>
+            <h3>Info Sources</h3>
+            <ul>
+                <li>
+                    <a href="https://brilliant.org/wiki/sorting-algorithms/">
+                        Brilliant on sorting algoritms
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.geeksforgeeks.org/sorting-algorithms/">
+                        geeksforgeeks
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3>Content References</h3>
+            <ul>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/Sorting_algorithm">
+                        wikipedia
+                    </a>
+                </li>
+                <li>
+                    <a href="https://xlinux.nist.gov/dads/">
+                        xlinux
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=kPRA0W1kECg">
+                        youtube
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+    </nav>
+</footer>
+<!--END OF FOOTER-->
+
+</html>
